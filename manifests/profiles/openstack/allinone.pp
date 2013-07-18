@@ -86,6 +86,7 @@ class coi::profiles::openstack::allinone (
     nova_db_password => $nova_db_password,
     nova_user_password => $nova_user_password,
     secret_key => $horizon_secret_key,
+    libvirt_type => $libvirt_type,
   }
    
 
