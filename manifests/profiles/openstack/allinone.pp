@@ -36,6 +36,16 @@ class coi::profiles::openstack::allinone (
   # Metadata Configuration
   $metadata_shared_secret   = hiera('metadata_shared_secret'),
   # ovs config
+  $physical_network        = hiera('physical_network', 'physnet1'),
+  $tenant_network_type     = hiera('tenant_network_type', 'gre'),
+  $ovs_enable_tunneling    = hiera('ovs_enable_tunneling', true),
+  $ovs_local_ip            = hiera('ovs_local_ip',false),
+  $network_vlan_ranges     = hiera('network_vlan_ranges',undef),
+  $bridge_interface        = hiera('bridge_interface',undef),
+  $external_bridge_name    = hiera('external_bridge_name','br-ex'),
+  $bridge_uplinks          = hiera('bridge_uplinks',undef),
+  $bridge_mappings         = hiera('bridge_mappings',undef),
+  $enable_ovs_agent        = hiera('enable_ovs_agent',true),
   $tunnel_ip                = hiera('tunnel_ip'),
   # horizon
   $horizon_secret_key       = hiera('horizon_secret_key'),
